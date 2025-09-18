@@ -1,0 +1,126 @@
+/* 引入Google Fonts的Roboto和Noto Serif SC字体 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&family=Noto+Serif+SC:wght@400;700&display=swap');
+
+/* 定义自定义字体 */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./fonts/MyCustomFont.woff2') format('woff2'),
+        url('./fonts/MyCustomFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    /* 优化字体加载体验 */
+}
+
+/* 全局字体设置 */
+body {
+    font-family: 'Roboto', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    /* 调整正文字体大小 */
+    font-size: 18px;
+    /* 增加行高以提高可读性 */
+    line-height: 1.8;
+    /* 增加字间距 */
+    letter-spacing: 0.05em;
+    /* 增加词间距 */
+    word-spacing: 0.1em;
+    /* 优化文本渲染 */
+    text-rendering: optimizeLegibility;
+}
+
+/* 标题字体设置 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Noto Serif SC', 'MyCustomFont', serif;
+    /* 中文优先使用思源宋体 */
+    font-weight: 700;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* 代码字体设置 */
+code,
+pre {
+    font-family: 'JetBrains Mono', monospace, 'Fira Code', 'Consolas', 'Monaco';
+    font-size: 17px;
+}
+
+/* 侧边栏字体设置 */
+.sidebar {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 调整侧边栏导航的整体字体大小 */
+.sidebar-nav {
+    font-size: 18px;
+    /* 根据你的喜好调整大小 */
+}
+
+/* 调整侧边栏中所有链接的字体大小 */
+.sidebar-nav li a {
+    font-size: 14px;
+    /* 根据你的喜好调整大小 */
+}
+
+/* 特定调整一级目录的字体大小 */
+.sidebar-nav>li>a {
+    font-size: 15px;
+    /* 一级目录稍大一些 */
+}
+
+/* 特定调整二级及更深层级目录的字体大小 */
+.sidebar-nav ul li a {
+    font-size: 13px;
+    /* 子目录稍小一些 */
+}
+
+/* 可选：设置鼠标悬停时的样式 */
+.sidebar-nav li a:hover {
+    font-size: 14.5px;
+    /* 悬停时稍微放大 */
+    color: #007acc;
+    /* 改变颜色作为视觉反馈 */
+}
+
+/* 可选：设置当前活动页面对应的目录项样式 */
+.sidebar-nav li.active>a {
+    font-size: 15px;
+    font-weight: bold;
+    /* 可以加粗突出 */
+    color: #ff6b6b;
+    /* 活动项的颜色 */
+}
+
+/* 覆盖Docsify默认封面字体 (根据需要选择使用) */
+.cover-main h1 {
+    font-family: 'MyCustomFont', 'Noto Serif SC', serif;
+    font-size: 2.5em;
+}
+
+/* 导航栏字体设置 */
+.navbar {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+/* 响应式字体大小调整 - 在移动设备上适当缩小 */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+}
+
+.img-wrapper {
+    background: url('data:image/svg+xml;charset=UTF-8,<svg ... />') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9图片的宽高比 */
+}
