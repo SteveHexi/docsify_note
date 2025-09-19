@@ -4,4 +4,4 @@
 
 Hello World
 
-[>>官方文档](<https://docsify.js.org/>)
+[>>官方文档](https://docsify.js.org/#/zh-cn/)
